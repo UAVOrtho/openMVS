@@ -1332,6 +1332,10 @@ void DepthMapsData::FuseDepthMaps(PointCloud& pointcloud, bool bEstimateNormal)
 
 	//FOREACHPTR(pConnection, connections)
 	int depthData_in_use[scene.images.GetSize()]={0};
+	for(int i=0;i<scene.images.GetSize();i++)
+	{
+		depthData_in_use[i]=0;
+	}
 #pragma omp parallel for
 	for(int i=0;i<connections.size();i++) 
 	{
