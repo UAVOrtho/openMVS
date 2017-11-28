@@ -1331,7 +1331,7 @@ void DepthMapsData::FuseDepthMaps(PointCloud& pointcloud, bool bEstimateNormal)
 	GET_LOGCONSOLE().Pause();
 
 	//FOREACHPTR(pConnection, connections)
-	int depthData_in_use[scene.images.GetSize()]={0};
+	int depthData_in_use[scene.images.GetSize()];
 	for(int i=0;i<scene.images.GetSize();i++)
 	{
 		depthData_in_use[i]=0;
