@@ -1364,7 +1364,7 @@ void DepthMapsData::FuseDepthMaps(PointCloud& pointcloud, bool bEstimateNormal)
 				{
 					depthDataB.IncRef(ComposeDepthFilePath(idxImageB, "dmap"));
 				}
-				depthData_in_use[idxImage]++;
+				depthData_in_use[idxImageB]++;
 		
 				const Image& imageData = scene.images[pNeighbor->idx.ID];
 				DepthIndex& depthIdxs = arrDepthIdx[&imageData-scene.images.Begin()];
