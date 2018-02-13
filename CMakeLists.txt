@@ -3,7 +3,7 @@
 ########################################################################
 #
 # Project-wide settings
-CMAKE_MINIMUM_REQUIRED(VERSION 2.6.2)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.1)
 
 # Name of the project.
 #
@@ -11,6 +11,10 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.6.2)
 # as ${OpenMVS_SOURCE_DIR} and to the root binary directory as
 # ${OpenMVS_BINARY_DIR}.
 PROJECT(OpenMVS)
+
+# Default build is in Release mode
+set(CMAKE_BUILD_TYPE "Release")
+message("Build types: ${CMAKE_BUILD_TYPE}")
 
 set(OpenMVS_MAJOR_VERSION 0)
 set(OpenMVS_MINOR_VERSION 7)
